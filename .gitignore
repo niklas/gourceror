@@ -1,0 +1,17 @@
+.bundle
+db/*.sqlite3
+log/*.log
+tmp/
+.DS_Store
+.sass-cache/
+config/database.yml
+log/TODO
+chromedriver.log
+screenshots/
+screencasts/
+coverage
+public/uploads/
+*.swp
+*.swn
+*.swo
+rerun.txt
