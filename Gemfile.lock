@@ -265,6 +265,7 @@ DEPENDENCIES
   jquery-ui-rails
   launchy
   libnotify
+  meta_search (>= 1.1.0.pre)
   pickle
   pry
   rails (= 3.2.8)
