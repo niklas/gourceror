@@ -13,6 +13,8 @@ gem 'sqlite3'
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
+  gem 'jquery-rails'
+  gem 'jquery-ui-rails'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
@@ -36,3 +38,27 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+#
+group :test do
+  gem 'cucumber-rails', "~> 1.2.1", :require => false
+  gem 'rspec-rails', "~> 2.11.o"
+  gem 'launchy'
+  gem "pickle"
+
+  gem "spork", "1.0.0rc2"
+  gem "guard-rspec", "~> 1.1.0"
+  gem "guard-cucumber", "~> 1.2.0"
+  gem "guard-spork", "~> 1.1.0"
+  gem "guard-bundler", "~> 1.0.0"
+  gem "libnotify", :require => false
+  gem 'diff_matcher'
+  gem 'database_cleaner'
+end
+
+group :development, :test do
+  gem 'pry'
+end
+
+gem 'haml-rails'
+gem 'activeadmin'
+gem 'carrierwave'
