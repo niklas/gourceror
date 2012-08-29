@@ -67,6 +67,6 @@ end
 Spork.each_run do
   I18n.backend.reload!
   FactoryGirl.reload
-  load Rails.root/'config'/'routes.rb'
+  load Rails.root.join'config/routes.rb'
 end
 
