@@ -11,6 +11,9 @@ module NavigationHelpers
     when /^the (?:home|list) page$/
       '/'
 
+    when 'the admin dashboard'
+      admin_dashboard_path
+
     when /^the page (?:of|for) #{capture_model}$/
       case m = model!($1)
       when Project

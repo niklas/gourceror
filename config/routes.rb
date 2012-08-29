@@ -3,6 +3,12 @@ Gourceror::Application.routes.draw do
 
   devise_for :admin_users, ActiveAdmin::Devise.config
 
+  if Rails.env.test?
+    scope 'test' do
+      get 'sign_in' => 'test_acceleration#sign_in', as: 'fast_sign_in'
+    end
+  end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
