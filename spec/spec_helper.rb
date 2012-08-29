@@ -6,8 +6,6 @@ Spork.prefork do
   require File.dirname(__FILE__) + "/../config/spork_prefork"
 
   require 'rspec/rails'
-  require 'fakefs/spec_helpers'
-  require 'webmock/rspec'
 
   RSpec.configure do |config|
     include FactoryGirl::Syntax::Default

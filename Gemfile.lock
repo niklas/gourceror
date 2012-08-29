@@ -85,6 +85,8 @@ GEM
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    factory_girl (4.0.0)
+      activesupport (>= 3.0.0)
     fastercsv (1.5.5)
     ffi (1.1.5)
     formtastic (2.1.1)
@@ -218,6 +220,10 @@ GEM
       libwebsocket (~> 0.1.3)
       multi_json (~> 1.0)
       rubyzip
+    simplecov (0.6.4)
+      multi_json (~> 1.0)
+      simplecov-html (~> 0.5.3)
+    simplecov-html (0.5.3)
     slop (3.3.2)
     spork (1.0.0rc2)
     sprockets (2.1.3)
@@ -249,6 +255,7 @@ DEPENDENCIES
   cucumber-rails (~> 1.2.1)
   database_cleaner
   diff_matcher
+  factory_girl
   guard-bundler (~> 1.0.0)
   guard-cucumber (~> 1.2.0)
   guard-rspec (~> 1.1.0)
@@ -263,6 +270,7 @@ DEPENDENCIES
   rails (= 3.2.8)
   rspec-rails (~> 2.11.o)
   sass-rails (~> 3.2.3)
+  simplecov
   spork (= 1.0.0rc2)
   sqlite3
   uglifier (>= 1.0.3)

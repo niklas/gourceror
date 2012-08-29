@@ -53,6 +53,9 @@ group :test do
   gem "libnotify", :require => false
   gem 'diff_matcher'
   gem 'database_cleaner'
+  gem 'simplecov'
+
+  gem 'factory_girl'
 end
 
 group :development, :test do
