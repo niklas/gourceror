@@ -1,0 +1,5 @@
+%ul.projects
+  - @projects.each do |project|
+    %li= render project
+
+= link_to 'New Project', new_project_path

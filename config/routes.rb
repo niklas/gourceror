@@ -1,4 +1,7 @@
 Gourceror::Application.routes.draw do
+  resources :projects
+  root to: 'projects#index'
+
   ActiveAdmin.routes(self)
 
   devise_for :admin_users, ActiveAdmin::Devise.config

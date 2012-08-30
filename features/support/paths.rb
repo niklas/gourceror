@@ -14,10 +14,19 @@ module NavigationHelpers
     when 'the admin dashboard'
       admin_dashboard_path
 
+    when /^the edit page (?:of|for) #{capture_model}$/
+      case m = model!($1)
+      when Project
+        edit_project_path(m)
+      else
+        flunk "Can't find mapping for page of #{$1}" +
+          "Now, go and add a mapping in #{__FILE__}"
+      end
+
     when /^the page (?:of|for) #{capture_model}$/
       case m = model!($1)
       when Project
-        admin_project_path(m)
+        project_path(m)
       else
         flunk "Can't find mapping for page of #{$1}" +
           "Now, go and add a mapping in #{__FILE__}"

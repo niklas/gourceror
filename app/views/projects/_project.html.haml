@@ -1,0 +1,6 @@
+%span.name= project.name
+- if project.repository.present?
+  %span.repository= project.repository
+
+= link_to 'Edit', edit_project_path(project)
+
