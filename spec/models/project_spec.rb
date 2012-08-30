@@ -9,15 +9,37 @@ describe Project do
     end
   end
 
+  shared_examples 'visualizable project' do
+    let(:args) { project.gource_arguments }
+    it "should not fade files" do
+      args.should include('--file-idle-time 0')
+    end
+
+    it "should run in the specified resolution" do
+      Project.resolution = '1920x1080'
+      args.should include('-1920x1080')
+    end
+
+    it "should run in fullscreen" do
+      args.should include('-f')
+    end
+
+    it "should set title from name of project" do
+      args.should include("--title '#{project.name}'")
+    end
+  end
+
   context "with repo url" do
     let(:repository_url) { 'git://github.com/anonymous/endless_loops'} 
     let(:project) { create(:project, repository: repository_url) }
 
     it_should_behave_like 'project counting plays'
+    it_should_behave_like 'visualizable project'
   end
 
   context "with uploaded log" do
     let(:project) { create(:project, log: File.open('spec/fixtures/history.log') ) }
     it_should_behave_like 'project counting plays'
+    it_should_behave_like 'visualizable project'
   end
 end

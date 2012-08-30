@@ -1,7 +1,13 @@
 class Project < ActiveRecord::Base
   attr_accessible :name, :repository, :log
 
+  validates_presence_of :name
+
   mount_uploader :log, LogUploader
+
+  class_attribute :resolution
+
+  self.resolution = '800x600'
 
   def play_count
     super || 0
@@ -9,5 +15,18 @@ class Project < ActiveRecord::Base
 
   def play!
     increment(:play_count)
+  end
+
+  def gource_arguments
+    [].tap do |args|
+      args << "-#{self.class.resolution}"
+      args << '--file-idle-time 0'
+      args << '-f'
+      args << "--title '#{name_without_single_quotes}'"
+    end
+  end
+
+  def name_without_single_quotes
+    name.gsub(/'/,'')
   end
 end
