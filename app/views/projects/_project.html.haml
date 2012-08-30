@@ -1,6 +1,8 @@
 %span.name= project.name
 - if project.repository.present?
   %span.repository= project.repository
+- if project.log.present?
+  %span.log= project.log.file.filename
 
 = link_to 'Edit', edit_project_path(project)
 

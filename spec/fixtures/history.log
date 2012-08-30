@@ -1,0 +1,168 @@
+user:Niklas Hofer
+1346254608
+:000000 100644 0000000... c82b2e9... A	.gitignore
+:000000 100644 0000000... 5367a9a... A	Gemfile
+:000000 100644 0000000... ce1f87c... A	Gemfile.lock
+:000000 100644 0000000... 7c36f23... A	README.rdoc
+:000000 100644 0000000... bb7a20e... A	Rakefile
+:000000 100644 0000000... d5edc04... A	app/assets/images/rails.png
+:000000 100644 0000000... 9097d83... A	app/assets/javascripts/application.js
+:000000 100644 0000000... 3192ec8... A	app/assets/stylesheets/application.css
+:000000 100644 0000000... e8065d9... A	app/controllers/application_controller.rb
+:000000 100644 0000000... de6be79... A	app/helpers/application_helper.rb
+:000000 100644 0000000... e69de29... A	app/mailers/.gitkeep
+:000000 100644 0000000... e69de29... A	app/models/.gitkeep
+:000000 100644 0000000... 57fa570... A	app/views/layouts/application.html.erb
+:000000 100644 0000000... 3728188... A	config.ru
+:000000 100644 0000000... eeeffd9... A	config/application.rb
+:000000 100644 0000000... 4489e58... A	config/boot.rb
+:000000 100644 0000000... 889dd9a... A	config/environment.rb
+:000000 100644 0000000... 49ca122... A	config/environments/development.rb
+:000000 100644 0000000... e26faa9... A	config/environments/production.rb
+:000000 100644 0000000... 73625e5... A	config/environments/test.rb
+:000000 100644 0000000... 59385cd... A	config/initializers/backtrace_silencers.rb
+:000000 100644 0000000... 5d8d9be... A	config/initializers/inflections.rb
+:000000 100644 0000000... 72aca7e... A	config/initializers/mime_types.rb
+:000000 100644 0000000... 6c0cd19... A	config/initializers/secret_token.rb
+:000000 100644 0000000... 6868e29... A	config/initializers/session_store.rb
+:000000 100644 0000000... 999df20... A	config/initializers/wrap_parameters.rb
+:000000 100644 0000000... 179c14c... A	config/locales/en.yml
+:000000 100644 0000000... bf86d01... A	config/routes.rb
+:000000 100644 0000000... 4edb1e8... A	db/seeds.rb
+:000000 100644 0000000... fe41f5c... A	doc/README_FOR_APP
+:000000 100644 0000000... e69de29... A	lib/assets/.gitkeep
+:000000 100644 0000000... e69de29... A	lib/tasks/.gitkeep
+:000000 100644 0000000... e69de29... A	log/.gitkeep
+:000000 100644 0000000... 9a48320... A	public/404.html
+:000000 100644 0000000... 83660ab... A	public/422.html
+:000000 100644 0000000... f3648a0... A	public/500.html
+:000000 100644 0000000... e69de29... A	public/favicon.ico
+:000000 100644 0000000... a1d5099... A	public/index.html
+:000000 100644 0000000... 085187f... A	public/robots.txt
+:000000 100755 0000000... f8da2cf... A	script/rails
+:000000 100644 0000000... e69de29... A	test/fixtures/.gitkeep
+:000000 100644 0000000... e69de29... A	test/functional/.gitkeep
+:000000 100644 0000000... e69de29... A	test/integration/.gitkeep
+:000000 100644 0000000... 3fea27b... A	test/performance/browsing_test.rb
+:000000 100644 0000000... 8bf1192... A	test/test_helper.rb
+:000000 100644 0000000... e69de29... A	test/unit/.gitkeep
+:000000 100644 0000000... e69de29... A	vendor/assets/javascripts/.gitkeep
+:000000 100644 0000000... e69de29... A	vendor/assets/stylesheets/.gitkeep
+:000000 100644 0000000... e69de29... A	vendor/plugins/.gitkeep
+
+user:Niklas Hofer
+1346254640
+:000000 100644 0000000... d268b5d... A	.rvmrc
+
+user:Niklas Hofer
+1346255278
+:100644 100644 5367a9a... 042acaf... M	Gemfile
+:100644 100644 ce1f87c... 7bd2220... M	Gemfile.lock
+
+user:Niklas Hofer
+1346255591
+:000000 100644 0000000... 19b288d... A	config/cucumber.yml
+:000000 100644 0000000... 3c2c1a8... A	features/support/env.rb
+:000000 100644 0000000... 83f7947... A	lib/tasks/cucumber.rake
+:000000 100755 0000000... 7fa5c92... A	script/cucumber
+
+user:Niklas Hofer
+1346255661
+:000000 100644 0000000... 4e1e0d2... A	.rspec
+:000000 100644 0000000... 458d9ab... A	spec/spec_helper.rb
+
+user:Niklas Hofer
+1346255803
+:000000 100644 0000000... b26010c... A	Guardfile
+
+user:Niklas Hofer
+1346256277
+:100644 100644 042acaf... 2c86c3a... M	Gemfile
+:100644 100644 7bd2220... c18f0b8... M	Gemfile.lock
+:100644 100644 3c2c1a8... d1cef96... M	features/support/env.rb
+:100644 100644 458d9ab... ac21930... M	spec/spec_helper.rb
+
+user:Niklas Hofer
+1346256314
+:100644 100644 eeeffd9... 79cac36... M	config/application.rb
+:000000 100644 0000000... 44775f2... A	config/spork_prefork.rb
+
+user:Niklas Hofer
+1346257553
+:000000 100644 0000000... 756c073... A	features/step_definitions/pickle_steps.rb
+:000000 100644 0000000... bfffc4c... A	features/support/pickle.rb
+
+user:Niklas Hofer
+1346257653
+:000000 100644 0000000... f734a34... A	features/step_definitions/web_steps.rb
+:100644 100644 d1cef96... cc1dd49... M	features/support/env.rb
+:000000 100644 0000000... 592430f... A	features/support/paths.rb
+:000000 100644 0000000... d54467c... A	features/support/selectors.rb
+
+user:Niklas Hofer
+1346257774
+:100644 100644 ac21930... 20e51ea... M	spec/spec_helper.rb
+
+user:Niklas Hofer
+1346257954
+:000000 100644 0000000... 5c8a3fc... A	app/admin/dashboards.rb
+:000000 100644 0000000... d2b66c5... A	app/assets/javascripts/active_admin.js
+:000000 100644 0000000... 9b2dc9d... A	app/assets/stylesheets/active_admin.css.scss
+:000000 100644 0000000... 4a1624f... A	app/models/admin_user.rb
+:000000 100644 0000000... e5384f9... A	config/initializers/active_admin.rb
+:000000 100644 0000000... 51aee7a... A	config/initializers/devise.rb
+:000000 100644 0000000... 7783a74... A	config/locales/devise.en.yml
+:100644 100644 bf86d01... cafdcf8... M	config/routes.rb
+:000000 100644 0000000... 435c7da... A	db/migrate/20120829162840_devise_create_admin_users.rb
+:000000 100644 0000000... e106af3... A	db/migrate/20120829182845_create_admin_notes.rb
+:000000 100644 0000000... 296aa43... A	db/migrate/20120829182846_move_admin_notes_to_comments.rb
+
+user:Niklas Hofer
+1346258020
+:100644 100644 2c86c3a... 51a5da0... M	Gemfile
+:100644 100644 c18f0b8... 1444979... M	Gemfile.lock
+
+user:Niklas Hofer
+1346258723
+:100644 100644 51aee7a... f5f79f6... M	config/initializers/devise.rb
+
+user:Niklas Hofer
+1346259984
+:000000 100644 0000000... cfb77a5... A	app/admin/projects.rb
+:000000 100644 0000000... 0386ef0... A	app/controllers/test_acceleration_controller.rb
+:000000 100644 0000000... 01b89b9... A	app/models/project.rb
+:100644 100644 cafdcf8... 61bb6e6... M	config/routes.rb
+:000000 100644 0000000... 3c79c31... A	db/migrate/20120829160509_create_projects.rb
+:000000 100644 0000000... 473b84a... A	db/schema.rb
+:000000 100644 0000000... 7ed3e83... A	features/create_project.feature
+:000000 100644 0000000... 5cfe553... A	features/step_definitions/authentication_steps.rb
+:100644 100644 592430f... 74e19be... M	features/support/paths.rb
+:000000 100644 0000000... 4d49d48... A	spec/factories/user.rb
+:000000 100644 0000000... 3d15302... A	spec/models/admin_user_spec.rb
+:000000 100644 0000000... 9bda4d9... A	spec/models/project_spec.rb
+
+user:Niklas Hofer
+1346260200
+:100644 100644 01b89b9... 697296c... M	app/models/project.rb
+:000000 100644 0000000... 9f66825... A	db/migrate/20120829182847_add_repository_to_project.rb
+:100644 100644 473b84a... e5f6b13... M	db/schema.rb
+:000000 100644 0000000... cee64c0... A	features/configure_project.feature
+
+user:Niklas Hofer
+1346341918
+:100644 100644 51a5da0... f273728... M	Gemfile
+:100644 100644 1444979... 58acf9c... M	Gemfile.lock
+:000000 100644 0000000... 437c6d8... A	app/controllers/projects_controller.rb
+:000000 100644 0000000... 6946e54... A	app/views/projects/_project.html.haml
+:000000 100644 0000000... 981185b... A	app/views/projects/edit.html.haml
+:000000 100644 0000000... e8db014... A	app/views/projects/index.html.haml
+:000000 100644 0000000... 1b11169... A	app/views/projects/new.html.haml
+:000000 100644 0000000... d2ab05d... A	app/views/projects/show.html.haml
+:100644 000000 e5384f9... 0000000... D	config/initializers/active_admin.rb
+:000000 100644 0000000... 59c7d25... A	config/initializers/simple_form.rb
+:000000 100644 0000000... 0df11fe... A	config/locales/simple_form.en.yml
+:100644 100644 61bb6e6... 2dd3e40... M	config/routes.rb
+:100644 100644 cee64c0... 9155188... M	features/configure_project.feature
+:100644 100644 7ed3e83... c5c24f2... M	features/create_project.feature
+:100644 100644 74e19be... 16a0d65... M	features/support/paths.rb
+:100644 000000 a1d5099... 0000000... D	public/index.html

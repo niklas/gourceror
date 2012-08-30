@@ -1,5 +1,13 @@
 = simple_form_for @project do |f|
   = f.input :name
+
+  %p For public repositories, you can add the clone URL here
   = f.input :repository
+
+  %p If your want to visualize a private repository, you can upload the log.
+  = f.input :log, as: :file
+
+  %p generate the file with the following command:
+  %tt git log --pretty=format:user:%aN%n%ct --reverse --raw --encoding=UTF-8 --no-renames > history.log
   = f.submit
 
