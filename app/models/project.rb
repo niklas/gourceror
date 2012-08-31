@@ -49,12 +49,16 @@ class Project < ActiveRecord::Base
     if File.exist?( "#{repository_dir}" )
       system %Q~#{goto} && git pull~
     else
-      system %Q~#{goto} && git clone #{repository}~
+      system %Q~#{goto} && git clone #{repository} #{id}~
     end
   end
 
+  def base_dir
+    Rails.root.join("tmp/projects")
+  end
+
   def repository_dir
-    Rails.root.join("tmp/projects/#{id}")
+    base_dir.join(id.to_s)
   end
 
   def name_without_single_quotes
