@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+
+Dir = File.join( File.dirname(__FILE__), '..')
+require Dir.join('config/environment')
+
+Runfile = Dir.join('tmp/playback.run')
+File.touch(Runfile)
+RunningSince = Time.now
+
+while File.mtime(Runfile) < RunningSince 
+  project = Project.next_in_queue
+  project.play!
+end
+
+
+
+
