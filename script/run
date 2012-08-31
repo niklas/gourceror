@@ -1,18 +1,24 @@
 #!/usr/bin/env ruby
-#
+
+puts "starting up..."
 require 'pathname'
+require 'fileutils'
 
 Root = Pathname.new(File.expand_path( '..', File.dirname(__FILE__) ) )
 require Root.join('config/environment')
 
 Runfile = Root.join('tmp/playback.run')
-File.touch(Runfile)
+FileUtils.touch(Runfile)
 RunningSince = Time.now
 
 while File.mtime(Runfile) < RunningSince 
-  project = Project.next_in_queue
-  puts "running #{project.name}"
-  project.play!
+  if project = Project.next_in_queue
+    puts "running #{project.name}"
+    project.play!
+  else
+    puts "nothing found, waiting"
+    sleep 10
+  end
 end
 
 
