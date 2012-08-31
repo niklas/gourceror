@@ -3,6 +3,10 @@ require 'spec_helper'
 describe Project do
   let(:project) { create(:project)}
 
+  it "should not be visualizable without any source" do
+    project.should_not be_visualizable
+  end
+
   before do
     project.stub(:run_gource).and_return(true)
   end
@@ -35,6 +39,10 @@ describe Project do
     it "should set title from name of project" do
       args.should include("--title '#{project.name}'")
     end
+
+    it "should be visualizable" do
+      project.should be_visualizable
+    end
   end
 
   context "with repo url" do
@@ -52,6 +60,21 @@ describe Project do
 
     it "should have the log file as last item of command line" do
       project.gource_arguments.last.should =~ %r~/history.log$~
+    end
+  end
+
+  context "with multiple projects" do
+    before :each do
+      5.times { |i|  create :project, play_count: i+1, repository: 'git://github.com/anonymous/endless_loops' }
+    end
+
+    context 'next in queue' do
+      subject { described_class.next_in_queue }
+      it { should be_a(Project) }
+
+      it "should have the lowest play count" do
+        subject.play_count.should == 1
+      end
     end
   end
 end

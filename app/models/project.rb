@@ -9,6 +9,10 @@ class Project < ActiveRecord::Base
 
   self.resolution = '800x600'
 
+  def self.next_in_queue
+    order('play_count ASC, created_at ASC').all.find(&:visualizable?)
+  end
+
   def play_count
     super || 0
   end
@@ -16,6 +20,10 @@ class Project < ActiveRecord::Base
   def play!
     run_gource
     increment(:play_count)
+  end
+
+  def visualizable?
+    repository.present? or log.present?
   end
 
   def gource_arguments
