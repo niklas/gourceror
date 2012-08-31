@@ -1,9 +1,9 @@
 #!/usr/bin/env ruby
 
-Dir = File.join( File.dirname(__FILE__), '..')
-require Dir.join('config/environment')
+Root = File.join( File.dirname(__FILE__), '..')
+require Root.join('config/environment')
 
-Runfile = Dir.join('tmp/playback.run')
+Runfile = Root.join('tmp/playback.run')
 File.touch(Runfile)
 RunningSince = Time.now
 
