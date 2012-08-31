@@ -39,7 +39,7 @@ describe Project do
 
     it "should set title from name of project" do
       title = args.grep(/--title/).first
-      title.should =~ /^--title '#{project.name}'/
+      title.should =~ /^--title '#{project.name}/
     end
 
     it "should be visualizable" do
