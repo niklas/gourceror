@@ -39,6 +39,8 @@ class Project < ActiveRecord::Base
 
       if repository.blank? and log.present?
         args << log.file.path
+      elsif repository.present?
+        arggs << repository_dir
       end
     end
   end
