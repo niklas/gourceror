@@ -15,11 +15,14 @@ while File.mtime(Runfile) < RunningSince
   if project = Project.next_in_queue
     puts "running #{project.name}"
     project.play!
+    sleep 1
   else
     puts "nothing found, waiting"
     sleep 10
   end
 end
+
+puts "exiting.."
 
 
 
