@@ -28,6 +28,10 @@ describe Project do
       args.should include('-f')
     end
 
+    it "should stop at the end" do
+      args.should include('--stop-at-end')
+    end
+
     it "should set title from name of project" do
       args.should include("--title '#{project.name}'")
     end

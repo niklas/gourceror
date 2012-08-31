@@ -24,6 +24,7 @@ class Project < ActiveRecord::Base
       args << '--file-idle-time 0'
       args << '-f'
       args << "--title '#{name_without_single_quotes}'"
+      args << "--stop-at-end"
 
       if repository.blank? and log.present?
         args << log.file.path
