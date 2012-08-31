@@ -38,7 +38,7 @@ class Project < ActiveRecord::Base
       args << "-#{self.class.resolution}"
       args << '--file-idle-time 0'
       args << '-f'
-      args << "--title '#{name_without_single_quotes}' [#{Advertisment}]"
+      args << "--title '#{name_without_single_quotes} [#{Advertisment}]'"
       args << "--stop-at-end"
 
       if repository.blank? and log.present?
