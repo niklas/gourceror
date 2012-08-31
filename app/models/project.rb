@@ -9,7 +9,7 @@ class Project < ActiveRecord::Base
 
   self.resolution = '1280x720'
 
-  Advertisment = "register your app at http://halde.local:7777/"
+  Advertisment = "register your app at http://halde.local:7777/ (visualized by Gource)"
 
   def self.next_in_queue
     order('play_count ASC, created_at ASC').all.find(&:visualizable?)
