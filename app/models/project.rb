@@ -22,8 +22,7 @@ class Project < ActiveRecord::Base
   def play!
     return unless visualizable?
     pull if log.blank?
-    run_gource
-    increment(:play_count)
+    run_gource && increment(:play_count)
   end
 
   def visualizable?
