@@ -15,7 +15,7 @@ class Project < ActiveRecord::Base
     order('play_count ASC, created_at ASC').all.find(&:visualizable?)
   end
 
-  def self.fix
+  def self.fix!
     update_all({play_count: 0}, {play_count: nil})
   end
 
