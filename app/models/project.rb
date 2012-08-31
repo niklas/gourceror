@@ -18,6 +18,8 @@ class Project < ActiveRecord::Base
   end
 
   def play!
+    return unless visualizable?
+    pull if log.blank?
     run_gource
     increment(:play_count)
   end
@@ -38,6 +40,19 @@ class Project < ActiveRecord::Base
         args << log.file.path
       end
     end
+  end
+
+  def pull
+    goto = %Q~mkdir -p #{repository_dir} && cd #{repository_dir}~
+    if File.exist?( "#{repository_dir}/.git" )
+      system %Q~#{goto} && git pull~
+    else
+      system %Q~#{goto} && git clone #{repository_url}~
+    end
+  end
+
+  def repository_dir
+    Rails.root.join("tmp/projects/#{id}")
   end
 
   def name_without_single_quotes

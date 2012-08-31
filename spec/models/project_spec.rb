@@ -9,6 +9,7 @@ describe Project do
 
   before do
     project.stub(:run_gource).and_return(true)
+    project.stub(:pull).and_return(true)
   end
 
   shared_examples 'project counting plays' do
