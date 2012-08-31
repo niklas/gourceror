@@ -7,7 +7,7 @@ class Project < ActiveRecord::Base
 
   class_attribute :resolution
 
-  self.resolution = '800x600'
+  self.resolution = '1280x720'
 
   def self.next_in_queue
     order('play_count ASC, created_at ASC').all.find(&:visualizable?)
