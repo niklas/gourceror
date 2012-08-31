@@ -16,7 +16,7 @@ class Project < ActiveRecord::Base
   end
 
   def self.fix
-    update_all({play_count: 0}, {playcount: nil})
+    update_all({play_count: 0}, {play_count: nil})
   end
 
   def play_count
@@ -26,7 +26,7 @@ class Project < ActiveRecord::Base
   def play!
     return unless visualizable?
     pull if log.blank?
-    run_gource && increment(:play_count)
+    run_gource && increment(:play_count) && save!
   end
 
   def visualizable?
