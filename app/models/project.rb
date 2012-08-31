@@ -46,11 +46,10 @@ class Project < ActiveRecord::Base
   end
 
   def pull
-    goto = %Q~mkdir -p #{repository_dir} && cd #{repository_dir}~
     if File.exist?( "#{repository_dir}" )
-      system %Q~#{goto} && git pull~
+      system %Q~mkdir -p #{repository_dir} && cd #{repository_dir} && git pull~
     else
-      system %Q~#{base_dir} && git clone #{repository} #{id}~
+      system %Q~mkdir -p #{base_dir} && cd #{base_dir} && git clone #{repository} #{id}~
     end
   end
 
