@@ -9,6 +9,8 @@ class Project < ActiveRecord::Base
 
   self.resolution = '1280x720'
 
+  Advertisment = "register your app at http://halde.local:7777/"
+
   def self.next_in_queue
     order('play_count ASC, created_at ASC').all.find(&:visualizable?)
   end
@@ -33,7 +35,7 @@ class Project < ActiveRecord::Base
       args << "-#{self.class.resolution}"
       args << '--file-idle-time 0'
       args << '-f'
-      args << "--title '#{name_without_single_quotes}'"
+      args << "--title '#{name_without_single_quotes}' [#{Advertisment}]"
       args << "--stop-at-end"
 
       if repository.blank? and log.present?
