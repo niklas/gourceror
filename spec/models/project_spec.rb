@@ -41,5 +41,9 @@ describe Project do
     let(:project) { create(:project, log: File.open('spec/fixtures/history.log') ) }
     it_should_behave_like 'project counting plays'
     it_should_behave_like 'visualizable project'
+
+    it "should have the log file as last item of command line" do
+      project.gource_arguments.last.should =~ %r~/history.log$~
+    end
   end
 end
