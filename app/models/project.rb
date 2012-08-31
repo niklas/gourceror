@@ -23,6 +23,11 @@ class Project < ActiveRecord::Base
     super || 0
   end
 
+  def push!
+    self.play_count = (self.class.minimum(:play_count) || 0 ) -1
+    save!
+  end
+
   def play!
     return unless visualizable?
     pull if log.blank?

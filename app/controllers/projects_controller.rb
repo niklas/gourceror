@@ -8,4 +8,9 @@ class ProjectsController < InheritedResources::Base
     update! { projects_path }
   end
 
+  def push
+    resource.push!
+    redirect_to resource
+  end
+
 end

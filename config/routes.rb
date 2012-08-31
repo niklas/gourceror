@@ -1,5 +1,9 @@
 Gourceror::Application.routes.draw do
-  resources :projects
+  resources :projects do
+    member do
+      put :push
+    end
+  end
   root to: 'projects#index'
 
   ActiveAdmin.routes(self)
