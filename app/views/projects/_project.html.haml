@@ -4,5 +4,9 @@
 - if project.log.present?
   %span.log= project.log.file.filename
 
+%span.played
+  played:
+  = project.play_count
+
 = link_to 'Edit', edit_project_path(project)
 
