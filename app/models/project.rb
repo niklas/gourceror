@@ -41,7 +41,7 @@ class Project < ActiveRecord::Base
       args << "--title '#{name_without_single_quotes} [#{Advertisment}]'"
       args << "--stop-at-end"
       args << "--auto-skip-seconds 1"
-      args << "--seconds-per-day 2"
+      args << "--seconds-per-day 1"
 
       if repository.blank? and log.present?
         args << log.file.path
