@@ -38,10 +38,14 @@ class Project < ActiveRecord::Base
       args << "-#{self.class.resolution}"
       args << '--file-idle-time 0'
       args << '-f'
-      args << "--title '#{name_without_single_quotes} [#{Advertisment}]'"
+      if repository.blank?
+        args << "--title '#{name_without_single_quotes} [#{Advertisment}]'"
+      else
+        args << "--title '#{name_without_single_quotes} (#{repository}) [#{Advertisment}]'"
+      end
       args << "--stop-at-end"
       args << "--auto-skip-seconds 1"
-      args << "--seconds-per-day 1"
+      args << "--seconds-per-day 3"
 
       if repository.blank? and log.present?
         args << log.file.path
