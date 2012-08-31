@@ -10,6 +10,7 @@ require Root.join('config/environment')
 Runfile = Root.join('tmp/playback.run')
 FileUtils.touch(Runfile)
 RunningSince = Time.now
+Project.fix!
 
 while File.mtime(Runfile) < RunningSince 
   if project = Project.next_in_queue
