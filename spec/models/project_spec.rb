@@ -3,6 +3,10 @@ require 'spec_helper'
 describe Project do
   let(:project) { create(:project)}
 
+  before do
+    project.stub(:run_gource).and_return(true)
+  end
+
   shared_examples 'project counting plays' do
     it "should increase play_count by 1" do
       expect { project.play! }.to change(project, :play_count).by(1)

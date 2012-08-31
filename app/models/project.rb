@@ -14,6 +14,7 @@ class Project < ActiveRecord::Base
   end
 
   def play!
+    run_gource
     increment(:play_count)
   end
 
@@ -32,5 +33,9 @@ class Project < ActiveRecord::Base
 
   def name_without_single_quotes
     name.gsub(/'/,'')
+  end
+
+  def run_gource
+    system %Q~gource #{gource_arguments.join(' ')}~
   end
 end
